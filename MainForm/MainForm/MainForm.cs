@@ -17,6 +17,14 @@ namespace MainForm
         public MainForm()
         {
             InitializeComponent();
+            Dictionary<string, string> comboSource = new Dictionary<string, string>();
+            comboSource.Add("twt", "Twitter");
+            comboSource.Add("fb", "Facebook");
+            comboSource.Add("gm", "Gmail");
+            cbSite.DataSource = new BindingSource(comboSource, null);
+            cbSite.DisplayMember = "Value";
+            cbSite.ValueMember = "Key";
+            cbSite.SelectedValue = "twt";
         }
 
         private void btStart_Click(object sender, EventArgs e)

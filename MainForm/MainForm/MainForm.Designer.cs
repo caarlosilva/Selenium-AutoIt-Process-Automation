@@ -60,10 +60,6 @@
             // cbSite
             // 
             this.cbSite.FormattingEnabled = true;
-            this.cbSite.Items.AddRange(new object[] {
-            "Twitter",
-            "Google",
-            "Gmail"});
             this.cbSite.Location = new System.Drawing.Point(396, 17);
             this.cbSite.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbSite.Name = "cbSite";
