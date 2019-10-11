@@ -48,6 +48,7 @@
             this.item1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnExit = new System.Windows.Forms.ToolStripMenuItem();
+            this.tesseractOCRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogos)).BeginInit();
@@ -181,7 +182,8 @@
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.item1ToolStripMenuItem,
             this.toolStripSeparator1,
-            this.btnExit});
+            this.btnExit,
+            this.tesseractOCRToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
@@ -232,6 +234,12 @@
             this.btnExit.Size = new System.Drawing.Size(180, 22);
             this.btnExit.Text = "Exit";
             this.btnExit.Click += new System.EventHandler(this.Exit_Click);
+            // tesseractOCRToolStripMenuItem
+            // 
+            this.tesseractOCRToolStripMenuItem.Name = "tesseractOCRToolStripMenuItem";
+            this.tesseractOCRToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.tesseractOCRToolStripMenuItem.Text = "Tesseract OCR";
+            this.tesseractOCRToolStripMenuItem.Click += new System.EventHandler(this.tesseractOCRToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -284,6 +292,7 @@
         private System.Windows.Forms.ToolStripMenuItem item1ToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem btnExit;
+        private System.Windows.Forms.ToolStripMenuItem tesseractOCRToolStripMenuItem;
     }
 }
 

@@ -113,5 +113,12 @@ namespace MainForm
             }
         }
 
+        private void tesseractOCRToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            TessOCR ocr = new TessOCR();
+            ocr.Show();
+        }
+
     }
 }
