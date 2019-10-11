@@ -34,11 +34,11 @@
             this.cbSite = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btStart = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btStart = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.lbWarning = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -102,6 +102,26 @@
             this.panel1.Size = new System.Drawing.Size(522, 129);
             this.panel1.TabIndex = 4;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.Lime;
+            this.label4.Location = new System.Drawing.Point(333, 11);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(34, 16);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Site";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.Lime;
+            this.label2.Location = new System.Drawing.Point(13, 68);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(70, 16);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Password";
+            // 
             // btStart
             // 
             this.btStart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
@@ -115,16 +135,6 @@
             this.btStart.Text = "Start";
             this.btStart.UseVisualStyleBackColor = false;
             this.btStart.Click += new System.EventHandler(this.btStart_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.Lime;
-            this.label2.Location = new System.Drawing.Point(13, 68);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 16);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Password";
             // 
             // label3
             // 
@@ -149,16 +159,6 @@
             this.lbWarning.TabIndex = 6;
             this.lbWarning.Text = "Something is wrong, please check the fields!";
             this.lbWarning.Visible = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.Lime;
-            this.label4.Location = new System.Drawing.Point(333, 11);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(34, 16);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Site";
             // 
             // menuStrip1
             // 

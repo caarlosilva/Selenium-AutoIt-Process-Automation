@@ -20,10 +20,12 @@ namespace MainForm
             Dictionary<string, string> comboSource = new Dictionary<string, string>();
             comboSource.Add("twt", "Twitter");
             comboSource.Add("fb", "Facebook");
-            comboSource.Add("gm", "Gmail");
+            comboSource.Add("gm", "Gmail"); 
+            comboSource.Add("gh", "GitHub");
             cbSite.DataSource = new BindingSource(comboSource, null);
             cbSite.DisplayMember = "Value";
             cbSite.ValueMember = "Key";
+            // initial value
             cbSite.SelectedValue = "twt";
         }
 
@@ -43,6 +45,11 @@ namespace MainForm
             {
                 if (lbWarning.Visible) lbWarning.Visible = false;
                 Main.loginGmail(txLogin.Text, txPassword.Text);
+            }
+            else if (cbSite.Text.Equals("GitHub") && txLogin.Text != "" && txPassword.Text != "")
+            {
+                if (lbWarning.Visible) lbWarning.Visible = false;
+                Main.loginGit(txLogin.Text, txPassword.Text);
             }
             else
             {
@@ -64,6 +71,10 @@ namespace MainForm
             if (cbSite.SelectedValue.Equals("gm"))
             {
                 pbLogos.Image = Resources.gmail;
+            }
+            if (cbSite.SelectedValue.Equals("gh"))
+            {
+                pbLogos.Image = Resources.git;
             }
         }
     }

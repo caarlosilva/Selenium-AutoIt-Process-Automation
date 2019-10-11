@@ -141,6 +141,48 @@ namespace MainForm
             //driver.Close();
         }
 
+        // GitHub
+
+        public static void loginGit(string user, string pwd)
+        {
+            // set driver to open G. Chrome
+            driver = new ChromeDriver();
+            // set url
+            string url = "https://github.com/login";
+            // go to the url
+            driver.Navigate().GoToUrl(url);
+
+            // create 'wait' object to wait 15 seconds
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+            // maximize the browser
+            driver.Manage().Window.Maximize();
+            AutoItX.Sleep(1000);
+            // wait 10 seconds to find element LOGIN
+            wait.Until(driver => driver.FindElement(By.Id("login_field")));
+            // set element login
+            IWebElement elLogin = driver.FindElement(By.Id("login_field"));
+
+            // sleep to wait the page load
+            AutoItX.Sleep(1000);
+
+            // wait 10 seconds to find element PASSWORD
+            wait.Until(driver => driver.FindElement(By.Id("password")));
+            //set element password
+            IWebElement elPassword = driver.FindElement(By.Id("password"));
+
+            // set button login
+            IWebElement btnLogin = driver.FindElement(By.Name("commit"));
+            elLogin.SendKeys(user);
+            AutoItX.Sleep(1000);
+            elPassword.SendKeys(pwd);
+            AutoItX.Sleep(1000);
+            // click on next/login
+            btnLogin.Click();
+
+            // if u want to close the driver
+            //driver.Close();
+        }
+
 
     }
 }
