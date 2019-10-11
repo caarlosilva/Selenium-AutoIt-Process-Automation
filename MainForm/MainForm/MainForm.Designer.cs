@@ -44,8 +44,10 @@
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pbLogos = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogos)).BeginInit();
             this.SuspendLayout();
             // 
             // txLogin
@@ -53,7 +55,7 @@
             this.txLogin.Location = new System.Drawing.Point(15, 31);
             this.txLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txLogin.Name = "txLogin";
-            this.txLogin.Size = new System.Drawing.Size(277, 23);
+            this.txLogin.Size = new System.Drawing.Size(296, 23);
             this.txLogin.TabIndex = 0;
             // 
             // txPassword
@@ -61,18 +63,19 @@
             this.txPassword.Location = new System.Drawing.Point(15, 88);
             this.txPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txPassword.Name = "txPassword";
-            this.txPassword.Size = new System.Drawing.Size(277, 23);
+            this.txPassword.Size = new System.Drawing.Size(296, 23);
             this.txPassword.TabIndex = 1;
             this.txPassword.UseSystemPasswordChar = true;
             // 
             // cbSite
             // 
-            this.cbSite.FormattingEnabled = true;
-            this.cbSite.Location = new System.Drawing.Point(306, 30);
+            this.cbSite.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSite.Location = new System.Drawing.Point(335, 30);
             this.cbSite.Margin = new System.Windows.Forms.Padding(3, 4, 15, 4);
             this.cbSite.Name = "cbSite";
-            this.cbSite.Size = new System.Drawing.Size(155, 24);
+            this.cbSite.Size = new System.Drawing.Size(170, 24);
             this.cbSite.TabIndex = 2;
+            this.cbSite.SelectedIndexChanged += new System.EventHandler(this.cbSite_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -90,13 +93,13 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.cbSite);
             this.panel1.Controls.Add(this.txLogin);
             this.panel1.Controls.Add(this.txPassword);
-            this.panel1.Controls.Add(this.cbSite);
-            this.panel1.Location = new System.Drawing.Point(9, 73);
+            this.panel1.Location = new System.Drawing.Point(10, 76);
             this.panel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(478, 129);
+            this.panel1.Size = new System.Drawing.Size(522, 129);
             this.panel1.TabIndex = 4;
             // 
             // btStart
@@ -104,10 +107,10 @@
             this.btStart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
             this.btStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btStart.ForeColor = System.Drawing.Color.Lime;
-            this.btStart.Location = new System.Drawing.Point(393, 208);
+            this.btStart.Location = new System.Drawing.Point(388, 215);
             this.btStart.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btStart.Name = "btStart";
-            this.btStart.Size = new System.Drawing.Size(94, 31);
+            this.btStart.Size = new System.Drawing.Size(144, 27);
             this.btStart.TabIndex = 5;
             this.btStart.Text = "Start";
             this.btStart.UseVisualStyleBackColor = false;
@@ -128,18 +131,18 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Lime;
-            this.label3.Location = new System.Drawing.Point(9, 31);
+            this.label3.Location = new System.Drawing.Point(10, 34);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(362, 29);
+            this.label3.Size = new System.Drawing.Size(191, 29);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Automation Process Login";
+            this.label3.Text = "Login Module";
             // 
             // lbWarning
             // 
             this.lbWarning.AutoSize = true;
             this.lbWarning.ForeColor = System.Drawing.Color.Red;
-            this.lbWarning.Location = new System.Drawing.Point(8, 216);
+            this.lbWarning.Location = new System.Drawing.Point(14, 219);
             this.lbWarning.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbWarning.Name = "lbWarning";
             this.lbWarning.Size = new System.Drawing.Size(304, 16);
@@ -151,10 +154,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.Lime;
-            this.label4.Location = new System.Drawing.Point(303, 10);
+            this.label4.Location = new System.Drawing.Point(333, 11);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(34, 16);
-            this.label4.TabIndex = 5;
+            this.label4.TabIndex = 6;
             this.label4.Text = "Site";
             // 
             // menuStrip1
@@ -166,7 +169,7 @@
             this.aboutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(497, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(543, 24);
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -194,14 +197,27 @@
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.aboutToolStripMenuItem.Text = "About";
             // 
+            // pbLogos
+            // 
+            this.pbLogos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbLogos.Image = global::MainForm.Properties.Resources._008_twitter;
+            this.pbLogos.Location = new System.Drawing.Point(483, 28);
+            this.pbLogos.Name = "pbLogos";
+            this.pbLogos.Size = new System.Drawing.Size(46, 44);
+            this.pbLogos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLogos.TabIndex = 7;
+            this.pbLogos.TabStop = false;
+            // 
             // MainForm
             // 
+            this.AcceptButton = this.btStart;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
-            this.ClientSize = new System.Drawing.Size(497, 250);
-            this.Controls.Add(this.btStart);
+            this.ClientSize = new System.Drawing.Size(543, 254);
+            this.Controls.Add(this.pbLogos);
             this.Controls.Add(this.lbWarning);
+            this.Controls.Add(this.btStart);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
@@ -212,12 +228,12 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.Name = "MainForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "S.A.P.A - Selenium/AutoIt Process Automation";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -233,6 +249,7 @@
         public System.Windows.Forms.TextBox txLogin;
         public System.Windows.Forms.TextBox txPassword;
         private System.Windows.Forms.Label lbWarning;
+        private System.Windows.Forms.PictureBox pbLogos;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
