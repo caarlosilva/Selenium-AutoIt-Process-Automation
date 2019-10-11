@@ -121,13 +121,22 @@
   <data name="gmail" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\gmail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="instagram" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\instagram.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="linkedin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\linkedin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="008-twitter" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\008-twitter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="git" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\git.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="036-facebook" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\036-facebook.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="git" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\git.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="twitch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\twitch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -183,6 +183,147 @@ namespace MainForm
             //driver.Close();
         }
 
+        public static void loginLinkedin(string user, string pwd)
+        {
+            // set driver to open G. Chrome
+            driver = new ChromeDriver();
+            // set url
+            string url = "https://www.linkedin.com/login";
+            // go to the url
+            driver.Navigate().GoToUrl(url);
+
+            // create 'wait' object to wait 15 seconds
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+            // maximize the browser
+            driver.Manage().Window.Maximize();
+            AutoItX.Sleep(1000);
+            // wait 10 seconds to find element LOGIN
+            wait.Until(driver => driver.FindElement(By.Id("username")));
+            // set element login
+            IWebElement elLogin = driver.FindElement(By.Id("username"));
+
+            // wait 10 seconds to find element PASSWORD
+            wait.Until(driver => driver.FindElement(By.Id("password")));
+            //set element password
+            IWebElement elPassword = driver.FindElement(By.Id("password"));
+
+            // setting the field LOGIN ans PASSWORD to value of user parameter
+            elLogin.SendKeys(user);
+            elPassword.SendKeys(pwd);
+
+            AutoItX.Sleep(1000);
+
+            // initiate a java script executor, so we can inject js to the page
+            IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
+
+            // emulate a click on the button
+            js.ExecuteScript("var el = document.querySelector('[type=\"submit\"]');" +
+                "el.click()");
+
+            // if u want to close the driver
+            //driver.Close();
+        }
+
+        public static void loginInsta(string user, string pwd)
+        {
+            // set driver to open G. Chrome
+            driver = new ChromeDriver();
+            // set url
+            string url = "https://www.instagram.com/accounts/login/";
+            // go to the url
+            driver.Navigate().GoToUrl(url);
+
+            // create 'wait' object to wait 15 seconds
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+            // maximize the browser
+            driver.Manage().Window.Maximize();
+            AutoItX.Sleep(1000);
+            // wait 10 seconds to find element LOGIN
+            wait.Until(driver => driver.FindElement(By.Name("username")));
+            // set element login
+            IWebElement elLogin = driver.FindElement(By.Name("username"));
+
+            // wait 10 seconds to find element PASSWORD
+            wait.Until(driver => driver.FindElement(By.Name("password")));
+            //set element password
+            IWebElement elPassword = driver.FindElement(By.Name("password"));
+
+            // setting the field LOGIN ans PASSWORD to value of user parameter
+            elLogin.SendKeys(user);
+            elPassword.SendKeys(pwd);
+
+            AutoItX.Sleep(1000);
+
+            // initiate a java script executor, so we can inject js to the page
+            IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
+
+            // emulate a click on the button
+            js.ExecuteScript("var el = document.querySelector('[type=\"submit\"]');" +
+                "el.click()");
+
+            // if u want to close the driver
+            //driver.Close();
+        }
+
+        public static void loginTwitch(string user, string pwd)
+        {
+            // set driver to open G. Chrome
+            driver = new ChromeDriver();
+            // set url
+            string url = "https://www.twitch.tv/";
+            // go to the url
+            driver.Navigate().GoToUrl(url);
+
+            // create 'wait' object to wait 15 seconds
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+            // maximize the browser
+            driver.Manage().Window.Maximize();
+            AutoItX.Sleep(1000);
+
+            // initiate a java script executor, so we can inject js to the page
+            IJavaScriptExecutor logbut = (IJavaScriptExecutor)driver;
+            //Emulate a click on "Login" button
+            logbut.ExecuteScript("var el = document.querySelector('[data-a-target=\"login-button\"]');" +
+                "el.click()");
+
+
+            // E que começe a busca...
+
+            // Retirar todos os //--- para ver as linhas de códigos (todas erradas diga-se de passagem)
+
+            // initiate a java script executor, so we can inject js to the page
+            // --- IJavaScriptExecutor login = (IJavaScriptExecutor)driver;
+            //set element login
+            // --- IWebElement elLogin = (IWebElement)login.ExecuteScript("var usern = document.querySelector('[autocomplete=\"username\"]');");
+
+            // initiate a java script executor, so we can inject js to the page
+            // --- IJavaScriptExecutor passw = (IJavaScriptExecutor)driver;
+            ////set element password
+            // --- IWebElement elPassword = (IWebElement)passw.ExecuteScript("var passwo = document.querySelector('[autocomplete=\"current-password\"]');");
+
+            // sleep to wait the page load
+            //--- AutoItX.Sleep(1000);
+
+            // wait 10 seconds to find element PASSWORD
+            //set element password
+
+            // setting the field LOGIN and PASSWORD to value of user parameter
+            //--- elLogin.SendKeys(user);
+            //--- elPassword.SendKeys(pwd);
+
+
+            //--- AutoItX.Sleep(1000);
+
+            // initiate a java script executor, so we can inject js to the page
+            //--- IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
+
+            // emulate a click on the button
+            //--- js.ExecuteScript("var el = document.querySelector('[type=\"submit\"]');" +
+            //---    "el.click()");
+
+            // if u want to close the driver
+            //driver.Close();
+        }
 
     }
 }
