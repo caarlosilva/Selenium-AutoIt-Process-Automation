@@ -16,6 +16,8 @@ namespace MainForm
         // the driver is required to manage the browser connection
         private static IWebDriver driver;
 
+        // Twitter
+
         public static void loginTwitter(string user, string pwd)
         {
             // set driver to open G. Chrome
@@ -57,9 +59,6 @@ namespace MainForm
         }
 
         // Facebook
-
-        // Facebook
-
         public static void loginFacebook(string user, string pwd)
         {
             // set driver to open G. Chrome
@@ -99,6 +98,5 @@ namespace MainForm
             //driver.Close();
 
         }
-
     }
 }
