@@ -22,11 +22,19 @@ namespace MainForm
             comboSource.Add("fb", "Facebook");
             comboSource.Add("gm", "Gmail"); 
             comboSource.Add("gh", "GitHub");
+            comboSource.Add("lkd", "Linkedin");
+            comboSource.Add("insta", "Instagram");
+            comboSource.Add("twc", "Twitch");
             cbSite.DataSource = new BindingSource(comboSource, null);
             cbSite.DisplayMember = "Value";
             cbSite.ValueMember = "Key";
             // initial value
             cbSite.SelectedValue = "twt";
+        }
+
+        private void Exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
         private void btStart_Click(object sender, EventArgs e)
@@ -50,6 +58,21 @@ namespace MainForm
             {
                 if (lbWarning.Visible) lbWarning.Visible = false;
                 Main.loginGit(txLogin.Text, txPassword.Text);
+            }
+            else if (cbSite.Text.Equals("Linkedin") && txLogin.Text != "" && txPassword.Text != "")
+            {
+                if (lbWarning.Visible) lbWarning.Visible = false;
+                Main.loginLinkedin(txLogin.Text, txPassword.Text);
+            }
+            else if (cbSite.Text.Equals("Instagram") && txLogin.Text != "" && txPassword.Text != "")
+            {
+                if (lbWarning.Visible) lbWarning.Visible = false;
+                Main.loginInsta(txLogin.Text, txPassword.Text);
+            }
+            else if (cbSite.Text.Equals("Twitch") && txLogin.Text != "" && txPassword.Text != "")
+            {
+                if (lbWarning.Visible) lbWarning.Visible = false;
+                Main.loginTwitch(txLogin.Text, txPassword.Text);
             }
             else
             {
@@ -76,7 +99,18 @@ namespace MainForm
             {
                 pbLogos.Image = Resources.git;
             }
-
+            if(cbSite.SelectedValue.Equals("lkd"))
+            {
+                pbLogos.Image = Resources.linkedin;
+            }
+            if (cbSite.SelectedValue.Equals("insta"))
+            {
+                pbLogos.Image = Resources.instagram;
+            }
+            if (cbSite.SelectedValue.Equals("twc"))
+            {
+                pbLogos.Image = Resources.twitch;
+            }
         }
 
         private void tesseractOCRToolStripMenuItem_Click(object sender, EventArgs e)
@@ -85,5 +119,6 @@ namespace MainForm
             TessOCR ocr = new TessOCR();
             ocr.Show();
         }
+
     }
 }
