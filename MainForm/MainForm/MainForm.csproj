@@ -163,7 +163,7 @@
   <ItemGroup>
     <None Include="Resources\twitch.png" />
   </ItemGroup>
-
+<ItemGroup>
     <Content Include="x64\liblept172.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
