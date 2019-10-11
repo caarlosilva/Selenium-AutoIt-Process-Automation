@@ -34,6 +34,11 @@ namespace MainForm
                 if (lbWarning.Visible) lbWarning.Visible = false;
                 Main.loginTwitter(txLogin.Text, txPassword.Text);
             }
+            else if(cbSite.Text.Equals("Facebook") && txLogin.Text != "" && txPassword.Text != "")
+            {
+                if (lbWarning.Visible) lbWarning.Visible = false;
+                Main.loginFacebook(txLogin.Text, txPassword.Text);
+            }
             else
             {
                 lbWarning.Visible = true;
