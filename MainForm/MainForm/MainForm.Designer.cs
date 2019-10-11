@@ -45,6 +45,7 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pbLogos = new System.Windows.Forms.PictureBox();
+            this.tesseractOCRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogos)).BeginInit();
@@ -175,6 +176,8 @@
             // 
             // fileToolStripMenuItem
             // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tesseractOCRToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
@@ -207,6 +210,13 @@
             this.pbLogos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbLogos.TabIndex = 7;
             this.pbLogos.TabStop = false;
+            // 
+            // tesseractOCRToolStripMenuItem
+            // 
+            this.tesseractOCRToolStripMenuItem.Name = "tesseractOCRToolStripMenuItem";
+            this.tesseractOCRToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.tesseractOCRToolStripMenuItem.Text = "Tesseract OCR";
+            this.tesseractOCRToolStripMenuItem.Click += new System.EventHandler(this.tesseractOCRToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -256,6 +266,7 @@
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tesseractOCRToolStripMenuItem;
     }
 }
 
